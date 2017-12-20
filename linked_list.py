@@ -102,8 +102,8 @@ if __name__ == "__main__":
     print("------")
     ll.travel()
     print("------")
-    print(ll.search(3))1213
-    
+    print(ll.search(3))
+
     print("------")
     print(ll.search(5))
     ll.remove(1)
