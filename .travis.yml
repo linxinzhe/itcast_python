@@ -1,4 +1,6 @@
-language: python
+language: python3
+python:
+    - "3.6"
 sudo: required
-before_install: sudo pip install requirements.txt
+before_install: sudo pip install -r requirements.txt
 script: py.test
