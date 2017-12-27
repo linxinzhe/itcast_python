@@ -2,7 +2,7 @@ import unittest
 import copy
 
 
-def selection_sort(alist):
+def select_sort(alist):
     my_list = copy.deepcopy(alist)
     n = len(my_list)
 
@@ -19,20 +19,20 @@ def selection_sort(alist):
 class TestSelectionSort(unittest.TestCase):
     def test_sort(self):
         a = [54, 26, 93, 17, 77, 31, 44, 55, 20]
-        self.assertListEqual(sorted(a), selection_sort(a))
+        self.assertListEqual(sorted(a), select_sort(a))
 
     def test_sort_0(self):
         a = []
-        self.assertListEqual(sorted(a), selection_sort(a))
+        self.assertListEqual(sorted(a), select_sort(a))
 
     def test_sort_1(self):
         a = [54]
-        self.assertListEqual(sorted(a), selection_sort(a))
+        self.assertListEqual(sorted(a), select_sort(a))
 
     def test_sort_2(self):
         a = [11, 22]
-        self.assertListEqual(sorted(a), selection_sort(a))
+        self.assertListEqual(sorted(a), select_sort(a))
         a = [22, 11]
-        self.assertListEqual(sorted(a), selection_sort(a))
+        self.assertListEqual(sorted(a), select_sort(a))
         a = [11, 11]
-        self.assertListEqual(sorted(a), selection_sort(a))
+        self.assertListEqual(sorted(a), select_sort(a))
