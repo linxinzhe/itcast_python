@@ -2,6 +2,7 @@ import unittest
 
 from .bubble_sort import bubble_sort
 from .insert_sort import insert_sort
+from .merge_sort import merge_sort
 from .quick_sort import quick_sort
 from .select_sort import select_sort
 from .shell_sort import shell_sort
@@ -83,3 +84,9 @@ class TestQuickSort(unittest.TestCase):
         a = [11, 11]
         self.sort(a, 0, len(a) - 1)
         self.assertListEqual(sorted(a), a)
+
+
+class TestMergeSort(TestBubbleSort):
+    def setUp(self):
+        super().setUp()
+        self.list = merge_sort
