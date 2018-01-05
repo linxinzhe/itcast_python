@@ -1,7 +1,6 @@
 # coding=utf-8
 
 import struct
-import sys
 from socket import *
 
 if len(sys.argv) != 2:
@@ -51,10 +50,9 @@ while True:
 
         # 包编号是否和上次相等
         if p_num + 1 == currentPackNum:
-            recvFile.write(recvData[4:]);
+            recvFile.write(recvData[4:])
             p_num += 1
-            print
-            '(%d)次接收到的数据' % (p_num)
+            print('(%d)次接收到的数据' % (p_num))
 
             ackBuf = struct.pack("!HH", 4, p_num)
 
@@ -62,13 +60,11 @@ while True:
         # 如果收到的数据小于516则认为出错
         if recvDataLen < 516:
             recvFile.close()
-            print
-            '已经成功下载！！！'
+            print('已经成功下载！！！')
             break
 
     elif cmd == 5:  # 是否为错误应答
-        print
-        "error num:%d" % currentPackNum
+        print("error num:%d" % currentPackNum)
         break
 
 udpSocket.close()
